@@ -77,6 +77,20 @@ $(function () {
             $("#chat_message").val("");
         }
     })
+    
+    $("#mute_button").click(function(){
+        const enabled = myStream.getAudioTracks()[0].enabled
+        if(enabled){
+            myStream.getAudioTracks()[0].enabled = false
+            html = `<i class = "fa fa-microhone-slash"></i>`
+            $("#mute_button").toggleClass("background_red");
+        }
+        else(enabled){
+            myStream.getAudioTracks()[0].enabled = true
+            html = `<i class = "fa fa-microhone"></i>`
+            $("#mute_button").toggleClass("background_red");
+        }
+    })
 
 })
 
