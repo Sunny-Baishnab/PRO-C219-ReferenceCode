@@ -79,18 +79,34 @@ $(function () {
     })
     
     $("#mute_button").click(function(){
-        const enabled = myStream.getAudioTracks()[0].enabled
+        const enabled = myStream.getAudioTracks()[0].enabled;
         if(enabled){
-            myStream.getAudioTracks()[0].enabled = false
-            html = `<i class = "fa fa-microhone-slash"></i>`
+            myStream.getAudioTracks()[0].enabled = false;
+            html = `<i class = "fa fa-microhone-slash"></i>`;
             $("#mute_button").toggleClass("background_red");
             $("#mute_button").html(html);
         }
         else(enabled){
-            myStream.getAudioTracks()[0].enabled = true
-            html = `<i class = "fa fa-microhone"></i>`
+            myStream.getAudioTracks()[0].enabled = true;
+            html = `<i class = "fa fa-microhone"></i>`;
             $("#mute_button").toggleClass("background_red");
             $("#mute_button").html(html);
+        }
+    })
+    
+    $("#stop_video").click(function(){
+        const enabled = myStream.getVideoTracks()[0].enabled;
+        if(enabled){
+            myStream.getVideoTracks()[0].enabled = false;
+            html = `<i class = "fa fa-video-slash"></i>`;
+            $("#stop_video").toggleClass("background_red");
+            $("#stop_video").html(html);
+        }
+        else{
+            myStream.getVideoTracks()[0].enabled = true;
+            html = `<i class = "fa fa-video-camera"></i>`;
+            $("#stop_video").toggleClass("background_red");
+            $("#stop_video").html(html); 
         }
     })
 
