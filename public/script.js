@@ -84,11 +84,13 @@ $(function () {
             myStream.getAudioTracks()[0].enabled = false
             html = `<i class = "fa fa-microhone-slash"></i>`
             $("#mute_button").toggleClass("background_red");
+            $("#mute_button").html(html);
         }
         else(enabled){
             myStream.getAudioTracks()[0].enabled = true
             html = `<i class = "fa fa-microhone"></i>`
             $("#mute_button").toggleClass("background_red");
+            $("#mute_button").html(html);
         }
     })
 
