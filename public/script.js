@@ -111,7 +111,7 @@ $(function () {
     })
     
     $("#invite_button").click(function(){
-        const to = prompt("Enter your Email address")
+        const to = prompt("Enter recipient's Email address")
         let data = {
             url:window.location.hrerf,
             to:to
