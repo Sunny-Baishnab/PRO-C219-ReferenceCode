@@ -113,7 +113,7 @@ $(function () {
     $("#invite_button").click(function(){
         const to = prompt("Enter recipient's Email address")
         let data = {
-            url:window.location.hrerf,
+            url:window.location.href,
             to:to
         }
         $.ajax({
